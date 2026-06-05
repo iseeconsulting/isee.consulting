@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0f172a;
+  --mist: #eef5ff;
+  --accent: #0ea5e9;
+  --persimmon: #f97316;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 22% 24%, rgba(56, 189, 248, 0.18), transparent 40%),
+    radial-gradient(circle at 78% -6%, rgba(15, 23, 42, 0.14), transparent 36%),
+    linear-gradient(180deg, #f9fbff 0%, var(--mist) 60%, #f8fbff 100%);
+  color: var(--ink);
+  min-height: 100vh;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), var(--font-body), Arial, Helvetica, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: rgba(6, 182, 212, 0.35);
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-animate][data-animate-strong] {
+  transform: translateY(80px) scale(0.97);
+  filter: blur(2px);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+[data-animate].is-visible[data-animate-strong] {
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate],
+  [data-animate][data-animate-strong],
+  [data-animate].is-visible {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
