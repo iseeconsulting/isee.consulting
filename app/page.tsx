@@ -67,7 +67,7 @@ const navItems = [
   { id: "contact", label: "Contact" },
 ];
 
-const businessPhoneDisplay = "(513) 276-6331";
+const businessPhoneDisplay = "(513) 633-9126";
 const businessPhoneHref = "tel:+15132766331";
 const businessEmailDisplay = "Kianna@isee.consulting";
 const businessEmailHref = "mailto:Kianna@isee.consulting";
