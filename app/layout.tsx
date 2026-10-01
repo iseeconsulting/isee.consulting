@@ -75,6 +75,29 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} ${manrope.variable} antialiased`}
       >
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-E7C2FNRTG5"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-E7C2FNRTG5');
+            `}
+          </Script>
+          <Script
+            src="https://cdn.userway.org/widget.js"
+            data-account="9DO7BSASMI"
+            data-position="3"
+            strategy="afterInteractive"
+          />
+          {children}
+          <Analytics />
+        </body>
+      </html>
         <Script
           src="https://cdn.userway.org/widget.js"
           data-account="9DO7BSASMI"
