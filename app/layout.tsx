@@ -95,18 +95,8 @@ export default function RootLayout({
             data-position="3"
             strategy="afterInteractive"
           />
-          {children}
-          <Analytics />
-        </body>
-      </html>
-        <Script
-          src="https://cdn.userway.org/widget.js"
-          data-account="9DO7BSASMI"
-          data-position="3"
-          strategy="afterInteractive"
-        />
-        {children}
-        <Analytics />
+         {children}
+        <Analytics/>
       </body>
     </html>
   );
