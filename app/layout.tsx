@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 verification: {
     google: "Pym0H4yaYw7HdtDIaRI7JYG6XTJckB_ywA1jav9-Yds",
   },
-  
+
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
