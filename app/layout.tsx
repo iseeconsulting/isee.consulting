@@ -31,7 +31,10 @@ export const metadata: Metadata = {
   description:
     "I-SEE partners with districts to elevate teaching and learning through customized coaching, professional development, and joyful culture-building.",
   metadataBase: new URL("https://www.isee.consulting"),
-
+verification: {
+    google: "Pym0H4yaYw7HdtDIaRI7JYG6XTJckB_ywA1jav9-Yds",
+  },
+  
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
